@@ -1,0 +1,49 @@
+.container {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px 0 50px;
+    width: 702px;
+    left: calc(50% - 702px/2 - 0.5px);
+    top: calc(50% - 565px/2 - 0.5px);
+    background: #FFFFFF;
+    border: 0.2px solid #965b65;
+    border-radius: 10px;
+}
+
+.heading {
+    position: relative;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    line-height: 38px;
+    text-align: center;
+    color: #181818;
+}
+
+.formField {
+    align-items: flex-start;
+    padding: 23px 22px;
+    gap: 10px;
+    margin-top: 5%;
+    position: relative;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 19px;
+    height: 68px;
+    width: 100%;
+    background: rgba(150, 91, 101, 0.04);
+    border-radius: 10px;
+    border-color: rgba(150, 91, 101, 0.04);
+    border: 0.2px solid rgba(150, 91, 101, 0.04);
+    color: #828282;
+}
+
+.formField:focus {
+    outline: 1.3px solid #965b65;
+}
+

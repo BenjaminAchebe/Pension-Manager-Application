@@ -1,17 +1,23 @@
 import React, { Fragment } from "react";
 import AttachmentUpload from "./Attachment/EmployerAttachment";
+import classes from "./EmployerForm.module.css";
+
+const onSubmit = (event) => {
+  event.preventDefault();
+};
 
 const EmployerForm = (props) => {
   return (
     <Fragment>
-      <div>
-        <p>Create Employer Pension Account</p>
-      </div>
-      <form>
-        <div>
+      <div className={classes.container}>
+        <div className={classes.heading}>
+          <p>Create Employer Pension Account</p>
+        </div>
+        <form onSubmit={onSubmit}>
           <div>
             <input
               required={true}
+              className={classes.formField}
               type="text"
               name="employerName"
               placeholder="Employer Name"
@@ -20,17 +26,19 @@ const EmployerForm = (props) => {
           <div>
             <input
               required={true}
+              className={classes.formField}
               type="number"
               name="rcNumber"
               placeholder="RC Number"
             />
           </div>
           <div>
-            <input required={true} type="number" name="tin" placeholder="TIN" />
+            <input required={true} className={classes.formField} type="number" name="tin" placeholder="TIN" />
           </div>
           <div>
             <input
               required={true}
+              className={classes.formField}
               type="email"
               name="email"
               placeholder="Email"
@@ -39,6 +47,7 @@ const EmployerForm = (props) => {
           <div>
             <input
               required={true}
+              className={classes.formField}
               type="number"
               name="mobileNumber"
               placeholder="Mobile number"
@@ -47,6 +56,7 @@ const EmployerForm = (props) => {
           <div>
             <input
               required={true}
+              className={classes.formField}
               type="text"
               name="company address"
               placeholder="Company Address"
@@ -55,14 +65,15 @@ const EmployerForm = (props) => {
           <div>
             <input
               required={true}
+              className={classes.formField}
               type="text"
-              name="email"
+              name="text"
               placeholder="State"
             />
           </div>
-          <AttachmentUpload/>
-        </div>
-      </form>
+          <AttachmentUpload />
+        </form>
+      </div>
     </Fragment>
   );
 };
